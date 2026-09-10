@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O'quv markazi — Boshqaruv paneli</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN EKRANI -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-box">
+    <h1>📚 O'quv markazi</h1>
+    <p class="subtitle">Boshqaruv paneliga kirish</p>
+    <input id="loginUsername" type="text" placeholder="Login">
+    <input id="loginPassword" type="password" placeholder="Parol">
+    <button id="loginBtn">Kirish</button>
+    <p id="loginError" class="error-text"></p>
+  </div>
+</div>
+
+<!-- ASOSIY PANEL -->
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <h2>📚 Boshqaruv</h2>
+    <nav>
+      <button class="nav-btn active" data-page="dashboard">🏠 Bosh sahifa</button>
+      <button class="nav-btn" data-page="groups">👥 Guruhlar</button>
+      <button class="nav-btn" data-page="students">🧑‍🎓 O'quvchilar</button>
+      <button class="nav-btn admin-only" data-page="teachers">🧑‍🏫 O'qituvchilar</button>
+      <button class="nav-btn admin-only" data-page="parents">👪 Ota-onalar</button>
+      <button class="nav-btn" data-page="lessons">📅 Darslar</button>
+      <button class="nav-btn admin-only" data-page="stats">📊 Statistika</button>
+    </nav>
+    <div class="user-info">
+      <span id="userName"></span>
+      <button id="logoutBtn">Chiqish</button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div id="page-dashboard" class="page"></div>
+    <div id="page-groups" class="page hidden"></div>
+    <div id="page-students" class="page hidden"></div>
+    <div id="page-teachers" class="page hidden"></div>
+    <div id="page-parents" class="page hidden"></div>
+    <div id="page-lessons" class="page hidden"></div>
+    <div id="page-stats" class="page hidden"></div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
