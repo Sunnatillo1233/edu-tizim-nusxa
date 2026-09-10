@@ -9,7 +9,7 @@ const DATA_FILE = path.join(__dirname, 'data.json');
 
 function emptyData() {
   return {
-    teachers: [],   // {id, name, username, passwordHash}
+    teachers: [],   // {id, name, username, passwordHash, telegramId, linkCode}
     groups: [],     // {id, name, gradeLevel, teacherId}
     students: [],   // {id, name, groupId, parentId}
     parents: [],    // {id, name, phone, telegramId, linkCode}
